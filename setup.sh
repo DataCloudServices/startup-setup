@@ -7,7 +7,7 @@ dcs_path_current=$(pwd)
 dcs_path_root="${dcs_path_current}/${dcs_startup_name}"
 dcs_path_config="${dcs_path_root}/config"
 dcs_onedev_tag="7.4.6"
-dcs_url_dockercompose="https://github.com/DataCloudServices/startup-setup/blob/main/docker-compose.yaml"
+dcs_url_dockercompose="https://raw.githubusercontent.com/DataCloudServices/startup-setup/main/docker-compose.yaml"
 
 # ---- INIT ----
 mkdir ${dcs_path_root}
