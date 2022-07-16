@@ -1,9 +1,12 @@
 #!/bin/bash
-# ---- Variables ---- 
+cd
+
+# ---- Variables ----
 dcs_startup_name="DataCloudServices"
-dcs_onedev_tag="7.4.6"
-dcs_path_root="./${dcs_startup_name}"
+dcs_path_current=$(pwd)
+dcs_path_root="${dcs_path_current}/${dcs_startup_name}"
 dcs_path_config="${dcs_path_root}/config"
+dcs_onedev_tag="7.4.6"
 dcs_url_dockercompose="https://github.com/DataCloudServices/startup-setup/blob/main/docker-compose.yaml"
 
 # ---- INIT ----
@@ -12,8 +15,7 @@ mkdir ${dcs_path_config}
 
 # ---- OneDev -----
 docker run \
-    --tty \ 
-    --rm \
+    --tty \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v ${dcs_path_config}/onedev:/opt/onedev \
     -p 6610:6610 \
@@ -26,4 +28,3 @@ cd ${dcs_path_config}
 wget ${dcs_url_dockercompose}
 docker-compose up -d
 cd -
-
