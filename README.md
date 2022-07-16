@@ -6,7 +6,7 @@ the startup tools to keep knowledge secured.
 - Versionning control
 - Documentation
 
-## OneDev
+## OneDev
 
 ...
 
