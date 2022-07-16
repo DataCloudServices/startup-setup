@@ -2,12 +2,12 @@
 # ---- Variables ---- 
 dcs_startup_name="DataCloudServices"
 dcs_onedev_tag="7.4.6"
-dcs_path_root="~/${dcs_startup_name}"
+dcs_path_root="./${dcs_startup_name}"
 dcs_path_config="${dcs_path_root}/config"
 dcs_url_dockercompose="https://github.com/DataCloudServices/startup-setup/blob/main/docker-compose.yaml"
 
 # ---- INIT ----
-mkdir "~/${dcs_startup_name}"
+mkdir ${dcs_path_root}
 mkdir ${dcs_path_config}
 
 # ---- OneDev -----
